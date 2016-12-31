@@ -1,3 +1,5 @@
+
+
 class Reptiles
 
 	attr_reader :color, :breed					# attribute reader
@@ -32,7 +34,7 @@ end
 
 class Iguana < Reptiles
 	def speak
-		puts "Hissssssss"
+		puts "Hisssssss"
 	end
 end
 
@@ -53,7 +55,7 @@ puts iggy.breed
 puts "Is Jar Head hungry?"
 iggy.hungry?
 
-puts "What do you eat?"
+puts "What are you eating?"
 iggy.feed("algea")
 
 
