@@ -1,3 +1,175 @@
-// Place all the styles related to the static_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+html, body {
+	height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Futura;
+}
+
+   /*   styling navbar   */
+
+.navbar {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+}
+
+
+
+.nav {
+	float: right;
+}
+
+.navbar ul li a {
+	color: black !important;
+}
+
+.navbar-nav > li > a:hover {
+	color: #30abdf!important;
+	-webkit-transition: color 1s;
+	-moz-transition:    color 1s;
+	-ms-transition:     color 1s;
+	-o-transition:      color 1s;
+	transition:         color 1s;
+}
+
+.navbar-default .active a {
+	color: #30abdf!important;
+	background-color: rgba(255, 255, 255, 0)!important;
+}
+
+@media (max-width: 767px) {
+	
+	.nav.navbar-nav {
+		background-color: rgba(255, 255, 255, .6)!important;
+	}
+}
+
+    /*   styling collapsible navbar   */
+    
+
+.navbar.navbar-default .navbar-collapse {
+	border: none;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: #30abdf;
+	background-color: #30abdf;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: white;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+	background-color: #30abdf;
+}
+
+// .yield {
+// 		osition: relative;
+// }
+   
+     
+
+
+     /* in about and contact page to have 
+				navbar same height as index page */
+.buffer {
+	height: 50px;
+}
+   
+    /*   image  */
+
+.jumbotron {
+	position: relative;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+		/*    style text in jumbotron    */
+
+h1 {
+	color: #30abdf;
+}
+
+h3 {
+	font-weight: 800;
+}
+
+@media (min-width: 450px) {
+
+	#pano {
+		position: absolute;
+		top: 40px;
+		left: 30px;
+	}
+}
+
+@media (max-width: 450px) {
+
+	#pano {
+		background-color: white;
+	}
+}
+
+			/*    style footer  */
+
+footer {
+	background-color: #30abdf;
+	padding: 20px;
+}
+
+footer p {
+	width: 100%;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+footer a {
+	color: white;
+}
+
+.list {
+	float: left;
+	width: 33.3%;
+}
+
+.list li {
+	padding: 3px;
+}
+ 
+    /*    dropdown menu for kinds of money   */
+
+.dropdown {
+	float: left;
+	width: 33.3%;
+	margin-top: 50px;
+	text-align: center;
+}
+
+.dropdown-menu {
+	text-align: center;
+}
+
+				/*   social media links   */
+
+.social {
+	float: right;
+	width: 33.4%;
+	text-align: center;
+	padding-top: 30px;
+}
+
+.fa {
+	padding: 5px;
+}
+
+.copy {
+	padding: 10px;
+	clear: both;
+}
