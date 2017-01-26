@@ -1,3 +1,5 @@
+
+
 html, body {
 	height: 100%;
   margin: 0;
@@ -17,23 +19,17 @@ html, body {
 	border: none;
 }
 
+.nav { float: right; }
 
-
-.nav {
-	float: right;
-}
-
-.navbar ul li a {
-	color: black !important;
-}
+.navbar ul li a { color: black !important; }
 
 .navbar-nav > li > a:hover {
 	color: #30abdf!important;
-	-webkit-transition: color 1s;
-	-moz-transition:    color 1s;
-	-ms-transition:     color 1s;
-	-o-transition:      color 1s;
-	transition:         color 1s;
+	-webkit-transition: color 0.8s;
+	-moz-transition:    color 0.8s;
+	-ms-transition:     color 0.8s;
+	-o-transition:      color 0.8s;
+	transition:         color 0.8s;
 }
 
 .navbar-default .active a {
@@ -44,16 +40,14 @@ html, body {
 @media (max-width: 767px) {
 	
 	.nav.navbar-nav {
-		background-color: rgba(255, 255, 255, .6)!important;
+		background-color: rgba(255, 255, 255, .7)!important;
 	}
 }
 
     /*   styling collapsible navbar   */
     
 
-.navbar.navbar-default .navbar-collapse {
-	border: none;
-}
+.navbar.navbar-default .navbar-collapse { border: none; }
 
 .navbar-default .navbar-toggle {
 	border-color: #30abdf;
@@ -69,20 +63,17 @@ html, body {
 	background-color: #30abdf;
 }
 
-// .yield {
-// 		osition: relative;
-// }
-   
-     
+ 				/* Title of the pages */
 
-
-     /* in about and contact page to have 
+.text { padding-top: 30px; } 
+  
+          /* in about and contact page to have 
 				navbar same height as index page */
-.buffer {
+/*.buffer {
 	height: 50px;
-}
+}*/
    
-    /*   image  */
+        /*   image  */
 
 .jumbotron {
 	position: relative;
@@ -91,21 +82,23 @@ html, body {
 	margin: 0;
 }
 
-		/*    style text in jumbotron    */
+		    /*    style text in jumbotron    */
 
 h1 {
 	color: #30abdf;
+	margin-left: 20px;
 }
 
 h3 {
 	font-weight: 800;
+	line-height: 0;
 }
 
 @media (min-width: 450px) {
 
 	#pano {
 		position: absolute;
-		top: 40px;
+		top: 45px;
 		left: 30px;
 	}
 }
@@ -113,7 +106,11 @@ h3 {
 @media (max-width: 450px) {
 
 	#pano {
-		background-color: white;
+		background-color: #eaddda;
+		text-align: center;
+	}
+	.navbar ul li {
+			font-size: 1.2em;
 	}
 }
 
@@ -131,45 +128,63 @@ footer p {
 }
 
 footer a {
-	color: white;
+	color: white!important;
+	list-style-type: none;
 }
 
-.list {
-	float: left;
-	width: 33.3%;
+footer a:hover {
+	background-color: #30abdf;
+	text-decoration: none;
 }
 
-.list li {
+footer li a:hover { color: #787985!important; }
+
+			/*  list for footer */
+
+#items {
+	text-align: center;
+	margin-left: -40px;
+	margin-right: 20px;
+}
+
+#items li {
+	list-style-type: none;
 	padding: 3px;
-}
- 
+} 
+
     /*    dropdown menu for kinds of money   */
 
+
 .dropdown {
-	float: left;
-	width: 33.3%;
-	margin-top: 50px;
+	margin-top: 35px;
+	margin-left: 0;
 	text-align: center;
 }
 
-.dropdown-menu {
-	text-align: center;
-}
+.dropdown a:hover { color: #787985!important; }
+
+.dropdown-menu { text-align: center; }
+
+.dropdown-menu a { color: grey!important; }
+
+.dropdown-menu a:hover { text-decoration: none; }
 
 				/*   social media links   */
 
 .social {
-	float: right;
-	width: 33.4%;
 	text-align: center;
-	padding-top: 30px;
+	margin-top: 35px;
 }
 
-.fa {
-	padding: 5px;
-}
+.social a:hover { color: #787985!important; }
+
+.fa { padding: 5px; }
 
 .copy {
+	text-align: center;
+	font-size: 10px;
 	padding: 10px;
+	color: white;
 	clear: both;
 }
+

@@ -16,10 +16,20 @@
 //= require_tree .
 
 $(document).click(function (event) {
-    var clickover = $(event.target);
-    var $navbar = $(".navbar-collapse");               
-    var _opened = $navbar.hasClass("in");
-    if (_opened === true && !clickover.hasClass("navbar-toggle")) {      
-        $navbar.collapse('hide');
-    }
+  var clickover = $(event.target);
+  var $navbar = $(".navbar-collapse");               
+  var _opened = $navbar.hasClass("in");
+  if (_opened === true && !clickover.hasClass("navbar-toggle")) {      
+    $navbar.collapse('hide');
+  }
 });
+
+// $( document ).ready(function() {
+//   var heights = $(".item").map(function() {
+//     return $(this).height();
+//   }).get(),
+
+//   maxHeight = Math.max.apply(null, heights);
+
+//   $(".item").height(maxHeight);
+// });
