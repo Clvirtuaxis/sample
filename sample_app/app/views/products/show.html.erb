@@ -7,6 +7,10 @@
 		<%= @product.name %>
 	</div>
 
+	<div class="price">
+		<strong><%= @product.price %></strong>
+	</div>
+
 	<div class="image">
 		<center><%= image_tag(@product.image_url, class: "img-responsive") %></center>
 	</div>
@@ -17,6 +21,7 @@
 		<%= @product.description %>
 		</p>
 	</div>
+
 
 
 

@@ -10,6 +10,7 @@
     <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="item">  
         <div class="title"><%= product.name %></div>
+        <div class="price"><%= product.price %></div>
         <div class="image"><center><%= image_tag(product.image_url, class: "img-responsive") if product.image_url %></center></div>
         <div class="description"><%= product.description %></div>
         <div class="row edit">
