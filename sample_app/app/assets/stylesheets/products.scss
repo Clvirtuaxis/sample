@@ -7,8 +7,8 @@ body {
 	width: 100%
 }
 
-					/* the div containing 1 product */
-.item {
+					/* the div containing 1 product for index.html*/
+.product {
 	position: relative;
 	width: 100%;
 	text-align: center;
@@ -16,7 +16,7 @@ body {
 	margin-bottom: 20px;
 }
 
-					/* info of product*/
+					/* info of product for index.html*/
 .title {
 	padding: 6px;
 	color: white;
@@ -39,4 +39,45 @@ body {
 	background-color: #f9f9f9;
 	padding: 4px;
 	margin: 0;
+}
+
+					/*  info of product for featured.html */
+
+.kit {
+
+}
+
+.carousel_image {
+	padding: 60px 0;
+}
+
+.carousel_title {
+	padding: 6px;
+	color: white;
+	text-align: center;
+	font-size: 1.6em;
+	background-color: #30abdf;
+	position: relative;
+	top: -120px;
+}
+
+.carousel-indicators {
+	bottom: -10px;
+}
+
+.carousel-indicators li {
+	border-color: black;
+}
+
+.buy {
+	position: relative;
+	bottom: -30px;
+	float: right;
+	height: 40px;
+	margin: 10px auto;
+	display: block;
+	border-radius: 7px;
+	outline: none;
+	font-size: 1.1em;
+	background-color: #802337;
 }
