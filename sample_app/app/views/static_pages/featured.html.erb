@@ -1,4 +1,6 @@
+<div class="text">
 <h1>Featured Product</h1>
+</div>
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -6,7 +8,7 @@
   	<!-- <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
     <li data-target="#carousel-example-generic" data-slide-to="2"></li> -->
-    <% (0..@products.count).each do |i| %>
+    <% (0..@products.count-1).each do |i| %>
     <li data-target="#carousel-example-generic" data-slide-to="<%= i %>" class="active"></li>
     <% end %>
 
