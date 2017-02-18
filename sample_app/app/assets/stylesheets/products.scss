@@ -43,13 +43,7 @@ body {
 
 					/*  info of product for featured.html */
 
-.kit {
-
-}
-
-.carousel_image {
-	padding: 60px 0;
-}
+.carousel_image { padding: 60px 0; }
 
 .carousel_title {
 	padding: 6px;
@@ -61,13 +55,9 @@ body {
 	top: -120px;
 }
 
-.carousel-indicators {
-	bottom: -10px;
-}
+.carousel-indicators { bottom: -10px; }
 
-.carousel-indicators li {
-	border-color: black;
-}
+.carousel-indicators li { border-color: black; }
 
 .buy {
 	position: relative;
@@ -80,4 +70,24 @@ body {
 	outline: none;
 	font-size: 1.1em;
 	background-color: #802337;
+}
+
+
+   /* style for form contact page   */
+
+.form {
+	border: 1px solid black;
+	margin: 2px;
+	border-radius: 5px;
+}
+
+#email { display: block; }
+
+#question { width: 100%; }
+
+#submit_tag {
+	padding: 9px 18px;
+	font-size: 1.2em;
+	background-color: lightgrey;
+	display: block;
 }

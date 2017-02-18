@@ -41,7 +41,7 @@ html, body {
 @media (max-width: 767px) {
 	
 	.nav.navbar-nav {
-		background-color: rgba(255, 255, 255, .7)!important;
+		background-color: rgba(255, 255, 255, .9)!important;
 	}
 }
 
@@ -63,6 +63,14 @@ html, body {
 .navbar-default .navbar-toggle:focus {
 	background-color: #30abdf;
 }
+
+   	/*    styling form navbar    */
+
+#form { margin-top: 8px; }
+
+.search { border: 1px solid black; }
+
+
 
  				/* Title of the pages */
 
