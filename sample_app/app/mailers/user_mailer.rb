@@ -5,6 +5,6 @@ class UserMailer < ApplicationMailer
         @question = message
         mail(from: email,
              to: "caroline.lachance@virtuaxis.com",
-             subject: "Message received from #{first_name + last_name}")
+             subject: "Message received from #{first_name} #{last_name}")
     end
 end
