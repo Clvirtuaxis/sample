@@ -18,7 +18,7 @@
   </head>
 
   <body data-spy="scroll" data-target="navbar">
-    
+  
     
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -43,15 +43,26 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li><%= link_to "Home", root_path %><span class="sr-only"></span></li>
-            <li><%= link_to "About", static_pages_about_path %></li>
+            <!-- <li><%#= link_to "About", static_pages_about_path %></li> -->
             <li><%= link_to "Support", static_pages_contact_path %></li>
             <li><%= link_to "Featured", static_pages_featured_path %></li>
             <li><%= link_to "Shopping", products_path %></li>
-            <!-- <li><%#= link_to "Account", static_pages_account_path %></li> -->  
+            <li><%= link_to "Order", orders_path %></li>
+         		<li>
+	          	<% if user_signed_in? %>
+	          		<%= link_to("Logout", destroy_user_session_path, :method => :delete) %> 
+	          	<% else %>
+	          		<%= link_to("Login", new_user_session_path) %>
+	          	<% end %>
+          	</li> 
           </ul>
         </div>   <!--end container-->
       </div>
   	</nav>
+
+  	<% if alert %>
+  		<p class="alert"><%= alert %></p>
+  	<% end %>
 
     <div class="yield">
       <%= yield%>
