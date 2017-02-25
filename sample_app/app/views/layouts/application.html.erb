@@ -7,14 +7,15 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track'=> true %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => "reload" %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track'=> "reload" %>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <%= csrf_meta_tags %>
+
   </head>
 
   <body data-spy="scroll" data-target="navbar">
@@ -61,8 +62,16 @@
   	</nav>
 
   	<% if alert %>
-  		<p class="alert"><%= alert %></p>
+  		<p class="alert fade in alert-warning" role="alert"><%= alert %></p>
   	<% end %>
+
+    <% if notice %>
+      <p class="alert fade in alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <%= notice %>
+      <span aria-hidden="true">&times;</span></button>
+      </p>
+    <% end %>
 
     <div class="yield">
       <%= yield%>
