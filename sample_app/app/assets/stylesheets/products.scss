@@ -4,7 +4,7 @@
 
 body {	
 	float: left;
-	width: 100%
+	width: 100%;
 }
 
 					/* the div containing 1 product for index.html*/
@@ -25,9 +25,11 @@ body {
 	background-color: #30abdf;
 }
 
-.image {	padding: 6px; }
+.price { margin: 15px; }
 
-.description {	margin-bottom: 45px; }
+.image { padding: 6px; }
+
+.description { margin-bottom: 45px; }
 
 .row .edit {
 	position: absolute;
@@ -36,6 +38,25 @@ body {
 	background-color: #f9f9f9;
 	padding: 4px;
 	margin: 0;
+}
+
+				/*  style for comments thumbnails  */
+
+.new_comment {
+	background-color: #30abdf;
+	padding: 10px 0;
+}
+
+#parent-container { padding: 5px; }
+
+.thumbnail { 
+	background-color: #30abdf;
+	margin: 8px 12px 8px 0;
+}
+
+.comment_body {
+	font-family: Times, Serif;
+	font-size: 1.2em;
 }
 
 					/*  info of product for featured.html */
@@ -94,10 +115,4 @@ body {
 .edit {
 	text-align: center;
 	padding: 10px;
-}
-
-    /*     style comment section     */
-
-.thumbnail {
-	font-family: Times, Serif;
 }

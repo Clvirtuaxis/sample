@@ -1,50 +1,49 @@
 <% if notice %>
-<p class="alert fade in alert-warning alert-dismissible" role="alert"><%= notice %></p>
+	<p class="alert fade in alert-warning alert-dismissible" role="alert"><%= notice %></p>
 <% end %>
 
 <div class="text">
 </div>
-<div class="container">
-<div class="product">
+<div class="container" id="parent-container">
+	<div class="product">
 
-	<div class="title">
-		<strong>Name: </strong>
-		<%= @product.name %>
-	</div>
+		<div class="title">
+			<strong><%= @product.name %></strong>
+			<span class="rated" data-score="<%= @product.average_rating %>"></span>
+		</div>
 
-	<div class="price">
-		<strong><%= @product.price %>&#36;</strong>
-	</div>
+		<div class="price">
+			<strong><%= @product.price %>&#36;</strong>
+		</div>
 
-	<div class="image">
-		<center><%= image_tag(@product.image_url, class: "img-responsive") %></center>
-	</div>
+		<div class="image">
+			<center><%= image_tag(@product.image_url, class: "img-responsive") %></center>
+		</div>
 
-	<div class="description">
-		<p>
-		<strong>Description: </strong>
-		<%= @product.description %>
-		</p>
-	</div>
+		<div class="description">
+			<p>
+			<strong>Description: </strong>
+			<%= @product.description %>
+			</p>
+		</div>
 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-xs-12 col-sm-6 col-md-4">
-				<div class="thumbnail">
+		<div class="new_comment">
+			
+			<%= render partial: "new_comment" %>
 
-					<p><%= @product.highest_rating_comment.try(:rating) %></p>
-					<%= render partial: "new_comment" %>
+		</div>
 
-					<%= render partial: "comments" %>
+		<div class="container">
+			<div class="row">
 
-				</div>
- 			</div>
+	  		<%= render partial: "comments" %>
+					
+			</div>
 		</div>
 	</div>
-</div>
 
-<div class="edit">
-<button><%= link_to 'Edit', edit_product_path(@product) %></button>
-<button><%= link_to 'Back', products_path %></button>
-</div>
+	<div class="edit">
+		<button><%= link_to 'Edit', edit_product_path(@product) %></button>
+		<button><%= link_to 'Back', products_path %></button>
+	</div>
 </div>
