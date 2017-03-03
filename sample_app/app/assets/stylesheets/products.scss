@@ -27,10 +27,7 @@ body {
 
 .image {	padding: 6px; }
 
-.description {
-	margin-bottom: 50px;
-	padding: 10px 8px;
-}
+.description {	margin-bottom: 45px; }
 
 .row .edit {
 	position: absolute;
@@ -90,4 +87,17 @@ body {
 	font-size: 1.2em;
 	background-color: lightgrey;
 	display: block;
+}
+
+    /*    style for button edit-back on product   */
+
+.edit {
+	text-align: center;
+	padding: 10px;
+}
+
+    /*     style comment section     */
+
+.thumbnail {
+	font-family: Times, Serif;
 }
