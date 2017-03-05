@@ -5,16 +5,17 @@
     <div class="price"><%= product.price %>&#36;</div>
     <div class="image"><center><%= image_tag(product.image_url, class: "img-responsive") if product.image_url %></center></div>
     <div class="description"><%= product.description %></div>
-    <div class="row edit">
-      <div class="col-xs-4">
-        <button><%= link_to 'Show', product %></button>
-      </div>
-      <div class="col-xs-4">
-        <button><%= link_to 'Edit', edit_product_path(product) %></button>
-      </div>
-      <div class="col-xs-4">
-        <% if signed_in? && current_user_admin? %>
-        <button><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+		  <div class="row edit">
+		    <div class="col-xs-4">
+		      <button><%= link_to 'Show', product %></button>
+		    </div>
+		    
+		    <div class="col-xs-4">
+		      <button><%= link_to 'Edit', edit_product_path(product) %></button>
+		    </div>
+		    <div class="col-xs-4">
+		    <% if signed_in? && current_user.admin? %>
+		      <button><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></button>
         <% end %>
       </div>
     </div>
