@@ -1,6 +1,6 @@
-<% if notice %>
-	<p class="alert fade in alert-warning alert-dismissible" role="alert"><%= notice %></p>
-<% end %>
+
+<p id="notice"><%= notice %></p>
+
 
 <div class="text">
 </div>
@@ -46,4 +46,6 @@
 		<button><%= link_to 'Edit', edit_product_path(@product) %></button>
 		<button><%= link_to 'Back', products_path %></button>
 	</div>
+
+	<span class="pagination"><%= will_paginate @comments %></span>
 </div>

@@ -8,10 +8,12 @@
   <div class="row">
      <%= render @products %> 
   </div>
+  <div class="edit"><button><%= link_to 'New Product', new_product_path %></button></div>
+
+	<div class="pagination"><%= will_paginate @products %></div>
+	</div>
 </div> <!-- div container-fluid -->
 
 <br>
-
-<button><%= link_to 'New Product', new_product_path %></button>
 
 

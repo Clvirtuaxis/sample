@@ -40,6 +40,8 @@ body {
 	margin: 0;
 }
 
+
+
 				/*  style for comments thumbnails  */
 
 .new_comment {
@@ -114,5 +116,31 @@ body {
 
 .edit {
 	text-align: center;
-	padding: 10px;
+	padding: 20px;
+	word-spacing: 20px;
+}
+
+.edit a:hover {
+	background-color: transparent;
+	text-decoration: none;
+	color: grey;
+}
+
+    /*    style for pagination   */
+
+.pagination {
+	float: right;
+	margin-right: 30px;
+}
+
+.pagination {
+	font-style: italic;
+	font-size: 1.05em;
+	word-spacing: 4px;
+}
+
+.pagination a:hover {
+	background-color: transparent;
+	text-decoration: none;
+	color: #802337;
 }
