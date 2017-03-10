@@ -19,7 +19,7 @@ class CommentsController < ApplicationController
         @comment = Comment.find(params[:id])
         product = @comment.product
         @comment.destroy
-        redirect_to product
+        redirect_to(fallback_location: root_path)
     end
     
 private

@@ -11,28 +11,28 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="title">
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
 
-  <div class="field">
+  <div class="description">
     <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
-
-  <div class="field">
+    <%= f.text_area :description, rows: "6", cols: "45", class: "form" %>
+  
+   <br><br>
+  
     <%= f.label :image_url %>
-    <%= f.text_field :image_url %>
-  </div>
+    <%= f.text_field :image_url, class: "form" %>
+  
 
-  <div class="field">
+  
     <%= f.label :price %><br>
-    <%= f.text_field :price %>
+    <%= f.text_field :price, class: "form" %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit nil, class: "btn_actions" %>
   </div>
 
 <% end %>

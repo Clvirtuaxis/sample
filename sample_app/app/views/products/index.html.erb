@@ -1,19 +1,18 @@
-<p id="notice"><%= notice %></p>
+
+<div class="text">
+	<h1>Products</h1>
+</div>
 
 
-<h1>Products</h1>
-
-
-<div class="container-fluid">
+<div class="container-fluid same-height">
   <div class="row">
      <%= render @products %> 
   </div>
-  <div class="edit"><button><%= link_to 'New Product', new_product_path %></button></div>
+  <div class="edit"><button class="btn_actions"><%= link_to 'New Product', new_product_path %></button></div>
 
 	<div class="pagination"><%= will_paginate @products %></div>
 	</div>
 </div> <!-- div container-fluid -->
 
 <br>
-
 

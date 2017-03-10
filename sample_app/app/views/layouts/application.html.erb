@@ -37,7 +37,7 @@
             <%= form_tag("/products", method: "get") do %>
               <%= label_tag(:q, "") %>
               <%= text_field_tag(:q, nil, class: "search") %>
-              <%= submit_tag("Search") %>
+              <%= submit_tag("Search", class: "btn_actions") %>
             <% end %>
           </span> 
         <!--nav links, content for toggling-->
@@ -62,14 +62,14 @@
   	</nav>
 
   	<% if alert %>
-  		<p class="alert fade in alert-warning alert-dismissible" role="alert"><%= alert %></p>
+  		<p class="alert fade in alert-dismissible" role="alert"><%= alert %></p>
   	<% end %>
 
     <% if notice %>
-      <p class="alert fade in alert-warning alert-dismissible" role="alert">
+      <p class="alert fade in alert-dismissible" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <%= notice %>
-      <span aria-hidden="true">&times;</span></button>
+      </button>
       </p>
     <% end %>
 

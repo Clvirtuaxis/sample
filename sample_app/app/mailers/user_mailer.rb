@@ -7,4 +7,10 @@ class UserMailer < ApplicationMailer
              to: "caroline.lachance@virtuaxis.com",
              subject: "Message received from #{first_name} #{last_name}")
     end
+    
+    def welcome(user)
+        @appname = "Virtuaxis"
+        mail(:to => user.email,
+             :subject => "Welcome to #{@appname}!")
+    end
 end

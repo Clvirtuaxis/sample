@@ -3,4 +3,6 @@ class UserMailerPreview < ActionMailer::Preview
     def contact_form
         UserMailer.contact_form(@email, @first_name, @last_name, @question)
     end
+    
+    
 end

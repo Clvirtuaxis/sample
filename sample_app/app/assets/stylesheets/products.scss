@@ -8,9 +8,11 @@ body {
 }
 
 					/* the div containing 1 product for index.html*/
+
 .product {
 	position: relative;
 	width: 100%;
+	min-height: 410px;
 	text-align: center;
 	border: 1px solid black;
 	margin-bottom: 20px;
@@ -29,7 +31,11 @@ body {
 
 .image { padding: 6px; }
 
-.description { margin-bottom: 45px; }
+.description { 
+	margin: 20px 0;
+	text-align: center;
+	font-size: 1.2em;
+}
 
 .row .edit {
 	position: absolute;
@@ -90,10 +96,35 @@ body {
 	outline: none;
 	font-size: 1.1em;
 	background-color: #802337;
+	box-shadow: 3px 4px 5px;
 }
 
+.buy a { color: lightgrey!important; }
 
-   /* style for form contact page   */
+.buy a:hover {
+	text-decoration: none;
+	color: white!important;
+}
+
+.buy a:link {	
+	background-color: transparent;
+  text-decoration: none;
+}
+
+    /*   update product button on edit product form   */
+  
+.actions {
+	text-align: center;
+	padding-top: 10px;
+}
+
+     /* style for form contact page   */
+
+p .contact-page {
+	background-color: #30abdf;
+	color: white;
+	padding: 5px 30px;
+}
 
 .form {
 	border: 1px solid black;
@@ -107,9 +138,8 @@ body {
 
 #submit_tag {
 	padding: 9px 18px;
-	font-size: 1.2em;
-	background-color: lightgrey;
-	display: block;
+	font-size: 1.1em;
+	margin-bottom: 10px;
 }
 
     /*    style for button edit-back on product   */
@@ -131,16 +161,16 @@ body {
 .pagination {
 	float: right;
 	margin-right: 30px;
-}
-
-.pagination {
 	font-style: italic;
 	font-size: 1.05em;
-	word-spacing: 4px;
+	word-spacing: 5px;
 }
+
+.pagination a { color: lightgrey!important; }
 
 .pagination a:hover {
 	background-color: transparent;
 	text-decoration: none;
-	color: #802337;
+	color: #802337!important;
+	font-size: 1.1em;
 }

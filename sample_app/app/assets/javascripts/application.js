@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+
 
 $(document).click(function (event) {
   var clickover = $(event.target);
@@ -33,7 +33,5 @@ $(document).ready(function () {
 });
 
 
-// $(document).ready(function(){
-//     alert("jkgkjb,j,");
-//   });
+
 

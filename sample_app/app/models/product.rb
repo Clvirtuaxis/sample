@@ -1,7 +1,8 @@
 class Product < ApplicationRecord
     validates :name, presence: true
     validates :description, presence: true
-    validates :price, numericality: { only_integer: true }
+    validates :image_url, presence: true
+    validates :price, numericality: { only_decimal: true }
     
     has_many :orders
     has_many :comments
