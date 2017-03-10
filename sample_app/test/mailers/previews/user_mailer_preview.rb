@@ -4,5 +4,8 @@ class UserMailerPreview < ActionMailer::Preview
         UserMailer.contact_form(@email, @first_name, @last_name, @question)
     end
     
-    
+    def welcome
+        UserMailer.welcome(@appname)
+    end
+
 end
