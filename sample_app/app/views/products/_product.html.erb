@@ -9,11 +9,15 @@
     <div class="description"><%= product.description %></div>
 		  <div class="row edit">
 		    <div class="col-xs-4">
+		    <% if signed_in? && current_user.admin? %>
 		      <button class="btn_actions"><%= link_to 'Show', product %></button>
+		      <% end %>
 		    </div>
 		    
 		    <div class="col-xs-4">
+		    <% if signed_in? && current_user.admin? %>
 		      <button class="btn_actions"><%= link_to 'Edit', edit_product_path(product) %></button>
+		      <% end %>
 		    </div>
 		    <div class="col-xs-4">
 		    <% if signed_in? && current_user.admin? %>
