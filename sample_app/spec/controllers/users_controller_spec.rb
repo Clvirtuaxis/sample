@@ -19,10 +19,9 @@ describe UsersController, :type => :controller do
         expect(assigns(:user)).to eq user
       end
 
-      it 'User can not access user1 info' do
+      it 'User can not access user2 info' do
         get :show, id: user2.id
-        expect(response).to have_http_status(200)
-        expect(response).to be_success
+        expect(response).to redirect_to(root_path)
       end
     end
     
