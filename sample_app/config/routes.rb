@@ -8,7 +8,7 @@ Rails.application.routes.draw do
         resources :comments
     end
     
-    root "static_pages#index"
+    root 'static_pages#index'
     
     get 'static_pages/about'
     
