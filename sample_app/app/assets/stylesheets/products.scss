@@ -118,6 +118,16 @@ body {
 	padding-top: 10px;
 }
 
+      /*   payment button on show page  */
+
+.stripe-button-el span {
+	background: #30abdf!important; /* For browsers that do not support gradients */    
+  background: -webkit-radial-gradient(#30abdf, grey, #30abdf)!important; /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(#30abdf, grey, #30abdf)!important; /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(#30abdf, grey, #30abdf)!important; /* For Firefox 3.6 to 15 */
+  background: radial-gradient(#30abdf, grey, #30abdf)!important; /* Standard syntax (must be last) */
+}
+
      /* style for form contact page   */
 
 p .contact-page {

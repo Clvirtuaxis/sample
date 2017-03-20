@@ -6,11 +6,11 @@ describe Product do
 
 		before do
 			@product = Product.create!(name: "goggles", description: "grey", image_url: "dhsl.jpg", price: 123.12)
-			@user = User.create!(email: "sylverblaze2@outlook.com", password: "123456")
-			@product.comments.create!(rating: 1, user: @user, body: "very cheap")
-			@product.comments.create!(rating: 4, user: @user, body: "Awsome!")
-			@product.comments.create!(rating: 3, user: @user, body: "Pricy but ok!")
-			@product.comments.create!(rating: 5, user: @user, body: "What fun!")
+			@user1 = User.create!(email: "sylverblaze2@outlook.com", password: "123456")
+			@product.comments.create!(rating: 1, user: @user1, body: "very cheap")
+			@product.comments.create!(rating: 4, user: @user1, body: "Awsome!")
+			@product.comments.create!(rating: 3, user: @user1, body: "Pricy but ok!")
+			@product.comments.create!(rating: 5, user: @user1, body: "What fun!")
 		end
 
 		it "returns average rating of comments" do

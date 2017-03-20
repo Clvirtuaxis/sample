@@ -1,6 +1,4 @@
-
 <p id="notice"><%= notice %></p>
-
 
 <div class="text">
 </div>
@@ -25,6 +23,12 @@
 			<strong>Description: </strong>
 			<%= @product.description %>
 			</p>
+		</div>
+
+		<div class="edit">
+			<%= form_tag "/payments/create" do %>
+			  <%= render partial: "shared/stripe_checkout_button" %>
+			<% end %>
 		</div>
 
 		<div class="new_comment">

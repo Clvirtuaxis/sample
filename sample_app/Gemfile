@@ -24,6 +24,8 @@ gem 'devise'
 
 gem 'rails-controller-testing'
 
+gem 'stripe'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -56,6 +58,9 @@ group :development, :test do
   gem 'sqlite3'
 
   gem 'rspec-rails', '~> 3.5'
+
+  gem 'factory_girl_rails'
+
 end
 
 group :production do
