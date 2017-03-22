@@ -58,7 +58,7 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
   
   # Dynamic links inside emails from your dev environment generate the right URLs.
-  config.action_mailer.default_url_options = { :host => 'virtuaxis.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'virtuaxis.heroku.com' }
 
 
   # Ignore bad email addresses and do not raise email delivery errors.
