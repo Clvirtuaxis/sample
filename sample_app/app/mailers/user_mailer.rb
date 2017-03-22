@@ -4,7 +4,7 @@ class UserMailer < ApplicationMailer
     def contact_form(email, first_name, last_name, question)
         @question = message
         mail(from: email,
-             to: "caroline.lachance@virtuaxis.com",
+             to: "sylverblaze2@outlook.com",
              subject: "Message received from #{first_name} #{last_name}")
     end
     
@@ -13,4 +13,13 @@ class UserMailer < ApplicationMailer
         mail(to: "user.email",
              subject: "Welcome to #{@appname}!")
     end
+    
+    def received
+        @first_name = params[:first_name]
+        @last_name = params[:last_name]
+        @email = params[:email]
+        @message = params[:message]
+        UserMailer.contact_form(@email, @first_name, @last_name, @question).deliver_now
+    end
+    
 end
