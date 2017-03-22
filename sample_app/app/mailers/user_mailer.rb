@@ -12,6 +12,8 @@ class UserMailer < ApplicationMailer
         @appname = "Virtuaxis"
         mail(to: "user.email",
              subject: "Welcome to #{@appname}!")
+        UserMailer.contact_form(@appname).deliver_now
+
     end
     
     def received
