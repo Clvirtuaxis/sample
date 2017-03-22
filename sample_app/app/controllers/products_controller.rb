@@ -5,14 +5,19 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    logger.debug "if accessing index"
     if params[:q]
+      logger.debug "params #{params}"
       search_term = params[:q]
       if Rails.env == "production"
         @products = Product.where("name ilike ?", "%#{search_term}%").paginate(:page => params[:page], :per_page => 3)
         # return our filtered list here
+        logger.debug "search #{Product.search(search_term)}"
       else
         @products = Product.where("name LIKE ?", "%#{search_term}%").paginate(:page => params[:page], :per_page => 3)
+        logger.debug "search 2 #{Product.search(search_term)}"
       end
+
     else
       @products = Product.all.paginate(:page => params[:page], :per_page => 3)
     end
@@ -81,6 +86,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-        params.require(:product).permit(:name, :description, :image_url, :price_in_cents)
+        params.require(:product).permit(:name, :description, :image_url, :price)
     end
 end
