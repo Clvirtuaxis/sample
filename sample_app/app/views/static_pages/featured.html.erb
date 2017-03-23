@@ -17,6 +17,9 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
   	<% @products.each do |product| %>
+
+    <% logger.debug "how many: #{@products.count}" %>
+    
 	    <div class="item<%= " active" if product == @products.first %>">
 			<div class="carousel_image"><center><%= image_tag(product.image_url) %></center></div>
 			<div class="carousel-caption">
