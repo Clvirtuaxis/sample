@@ -2,18 +2,8 @@
 
   <% @comments.each do |comment| %>
 
-  	<div class="col-xs-12 col-sm-6 col-md-4">
-			<div class="thumbnail">
-    		<p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
-        </p>
-    		<div class="rated" data-score="<%= comment.rating %>"></div>
-    		<p class="comment_body"><%= comment.body %></p>
-        <% if signed_in? && current_user.admin? %>
-          <button class="btn_actions"><%= link_to 'Destroy', product_comment_path(comment.product, comment), method: :delete, data: { confirm: 'Are you sure?' } %></button>
-        <% end %>
-  		</div>
-		</div>
-		
+    <%= render partial: "comments/comment", locals: {comment: comment} %>
+
   <% end %>
 
 </div>

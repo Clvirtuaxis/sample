@@ -7,7 +7,7 @@
 
 			<div class="title">
 			<strong><%= @product.name %></strong>
-			<span class="rated" data-score="<%= @product.average_rating %>"></span>
+			<span id="rated" class="rated" data-score="<%= @product.average_rating %>"></span>
 		</div>
 
 		<div class="price">
@@ -32,7 +32,7 @@
 			<% end %>
 		</div>
 
-		<div class="new_comment">
+		<div class="new">
 			
 			<%= render partial: "new_comment" %>
 
