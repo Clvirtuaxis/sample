@@ -28,6 +28,10 @@ gem 'stripe'
 
 gem 'dalli'
 
+gem 'redis-rails'
+
+gem 'newrelic_rpm'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
