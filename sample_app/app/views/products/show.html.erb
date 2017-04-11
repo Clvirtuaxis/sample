@@ -26,32 +26,36 @@
 			</p>
 		</div>
 
+		<span class="badge btn_actions">
+			Viewed <%= @product.views %> times
+		</span>
+
 		<div class="edit">
 			<%= form_tag "/payments/create" do %>
-			  <%= render partial: "shared/stripe_checkout_button" %>
-        <%= hidden_field_tag(:product_id, @product.id) %>
+				<%= render partial: "shared/stripe_checkout_button" %>
+				<%= hidden_field_tag(:product_id, @product.id) %>
 			<% end %>
 		</div>
 
 		<div class="new">
-			
 			<%= render partial: "new_comment" %>
-
 		</div>
 
 		<div class="container">
 			<div class="row">
-
-	  		<%= render partial: "comments" %>
-					
+				<%= render partial: "comments" %>
 			</div>
 		</div>
+
 	</div>
 
 	<div class="edit">
-		<button class="btn_actions"><%= link_to 'Edit', edit_product_path(@product) %></button>
+		<% if signed_in? && current_user.admin? %>
+			<button class="btn_actions"><%= link_to 'Edit', edit_product_path(@product) %></button>
+		<% end %>
 		<button class="btn_actions"><%= link_to 'Back', products_path %></button>
 	</div>
 
 	<span class="pagination"><%= will_paginate @comments %></span>
+
 </div>

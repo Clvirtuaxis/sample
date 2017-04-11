@@ -113,9 +113,9 @@ body {
 	color: white!important;
 }
 
-.buy a:link {	
+.buy a:link {
 	background-color: transparent;
-  text-decoration: none;
+	text-decoration: none;
 }
 
     /*   update product button on edit product form   */
@@ -123,6 +123,14 @@ body {
 .actions {
 	text-align: center;
 	padding-top: 10px;
+}
+
+			/*   style for button views   */
+
+.badge {
+	float: right;
+	margin-right: 10px;
+	font-size: 0.8em;
 }
 
       /*   payment button on show page  */

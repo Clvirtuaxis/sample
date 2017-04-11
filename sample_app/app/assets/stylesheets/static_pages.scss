@@ -79,11 +79,12 @@ html, body {
 
 .alert {
 	top: 60px;
-	left: 150px;
-	height: 45px;
-	color: red;
-	background-color: white;
-	border: 4px solid red;
+	left: 100px;
+	padding: 10px;
+	margin: 0;
+	color: grey;
+	background-color: #c8e0c7;
+	border: 3px solid #39ffd4;
 	text-align: center;
 	position: absolute;
 	z-index: 2;
