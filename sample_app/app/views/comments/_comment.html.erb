@@ -5,7 +5,7 @@
     </p>
     <div id="rated" class="rated" data-score="<%= comment.rating %>"></div>
     <p class="comment_body"><%= comment.body %></p>
-    <% if signed_in? && current_user.admin? %>
+    <% if current_user && current_user.admin? %>
       <button class="btn_actions"><%= link_to 'Destroy', product_comment_path(comment.product, comment), method: :delete, data: { confirm: 'Are you sure?' } %></button>
     <% end %>
   </div>
