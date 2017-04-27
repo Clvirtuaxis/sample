@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def index
-      
+
   end
 
   def featured
@@ -8,11 +8,11 @@ class StaticPagesController < ApplicationController
   end
   
   def received
-      @first_name = params[:first_name]
-      @last_name = params[:last_name]
-      @email = params[:email]
-      @question = params[:question]
-      UserMailer.contact_form(@email, @first_name, @last_name, @question).deliver_now
+    @first_name = params[:first_name]
+    @last_name = params[:last_name]
+    @email = params[:email]
+    @question = params[:question]
+    UserMailer.contact_form(@email, @first_name, @last_name, @question).deliver_now
   end
 end
 
