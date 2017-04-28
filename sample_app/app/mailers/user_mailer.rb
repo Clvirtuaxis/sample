@@ -10,7 +10,7 @@ class UserMailer < ApplicationMailer
     
     def welcome(user)
         @appname = "Virtuaxis"
-        mail(from: email,
+        mail(from: "caroline.lachance@virtuaxis.com",
              to: "user.email",
             subject: "Welcome to #{@appname}!")
     end
