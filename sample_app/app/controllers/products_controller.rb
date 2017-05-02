@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
         # return our filtered list here
         logger.debug "search #{Product.search(search_term)}"
       else
-        @products = Product.where("name LIKE ?", "%#{search_term}%").paginate(:page => params[:page], :per_page => 3)
+      @products = Product.where("name LIKE ?", "%#{search_term}%").paginate(:page => params[:page], :per_page => 3)
         logger.debug "search 2 #{Product.search(search_term)}"
       end
 
@@ -27,6 +27,7 @@ class ProductsController < ApplicationController
   def show
     @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 3)
     @product.viewed!
+    logger.debug "search 3 #{Product}"
   end
 
   # GET /products/new
@@ -45,6 +46,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
+          logger.debug "search 4 #{Product.name}"
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
@@ -57,6 +59,7 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
+      #byebug
     respond_to do |format|
       if @product.update(product_params)
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
@@ -72,7 +75,7 @@ class ProductsController < ApplicationController
   # DELETE /products/1.json
   def destroy
     @product.destroy
-    byebug
+    #byebug
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }

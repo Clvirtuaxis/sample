@@ -14,5 +14,4 @@ class UserMailer < ApplicationMailer
              to: "user.email",
             subject: "Welcome to #{@appname}!")
     end
-    
 end
