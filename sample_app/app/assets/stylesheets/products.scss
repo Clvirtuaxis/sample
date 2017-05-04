@@ -29,7 +29,10 @@ body {
 
 .price { margin: 15px; }
 
-.image { padding: 6px; }
+.image { 
+	width: 240px;
+	margin: auto;
+}
 
 .description { 
 	margin: 20px 0;
@@ -42,9 +45,15 @@ body {
 	bottom: 0;
 	width: 100%;
 	background-color: #f9f9f9;
-	padding: 4px;
+	padding: 6px;
 	margin: 0;
 }
+
+      /*  style for title of new product page  */
+
+.header {
+	color: black;
+}      
 
        /*  style for new comment  */
 
@@ -53,6 +62,13 @@ body {
 	padding: 20px;
 	font-size: 1.5em;
 	font-family: "Starcraft";
+}
+
+.comment_area {
+	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 				/*  style for comments thumbnails  */
@@ -76,7 +92,15 @@ body {
 
 					/*  info of product for featured.html */
 
-.carousel_image { padding: 60px 0; }
+.carousel_image {
+	padding: 30px;
+	margin: auto;
+}
+
+.carousel-control:hover {
+	color: #e5e3e3;
+	opacity: 0.3;
+}
 
 .carousel_title {
 	padding: 6px;
@@ -85,7 +109,7 @@ body {
 	font-size: 1.6em;
 	background-color: #30abdf;
 	position: relative;
-	top: -120px;
+	top: -280px;
 }
 
 .carousel-indicators { bottom: -10px; }
@@ -125,12 +149,22 @@ body {
 	padding-top: 10px;
 }
 
+.name_field {
+	color: black;
+}
+
 			/*   style for button views   */
 
 .badge {
 	float: right;
 	margin-right: 10px;
 	font-size: 0.8em;
+}
+
+       /*  img-zoom on show page */
+
+.img-zoom {
+	width: 250px;
 }
 
       /*   payment button on show page  */
@@ -189,6 +223,7 @@ p .contact-page {
 	font-style: italic;
 	font-size: 1.05em;
 	word-spacing: 5px;
+
 }
 
 .pagination a { color: lightgrey!important; }

@@ -6,19 +6,19 @@
 <div class="container-fluid same-height">
 
   <div class="row">
-  	<% cache(cache_key_for_products) do %>
+  	<% cache(@products) do %>
     	<%= render @products %> 
     <% end %>
   </div>
 
   <% if signed_in? && current_user.admin? %>
     <div class="edit"><button class="btn_actions"><%= link_to 'New Product', new_product_path %></button>
-    </div>
   <% end %>
+    </div>
+  
 
 	<div class="pagination"><%= will_paginate @products %>
 	</div>
 </div> <!-- div container-fluid -->
 
 <br>
-
