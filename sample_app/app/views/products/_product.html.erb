@@ -3,38 +3,38 @@
 
 	<% cache(product) do %>
 
-  <div class="product">
+	  <div class="product">
 
-    <div class="title"><%= product.name %></div>
-    <div class="price"><%= product.price %>&#36;</div>
-    <div class="image"><center>
-    <%= link_to image_tag(product.image_url, class: "img-responsive"), product if product.image_url %>
-    </center>
-    </div>
-    <div class="description"><%= product.description %>
-    </div>
+	    <div class="title"><%= product.name %></div>
+	    <div class="price"><%= product.price %>&#36;</div>
+	    <div class="image"><center>
+	    <%= link_to image_tag(product.image_url, class: "img-responsive"), product if product.image_url %>
+	    </center>
+	    </div>
+	    <div class="description"><%= product.description %>
+	    </div>
 
-		<div class="row edit">
-	    <div class="col-xs-4">
-	    <% if signed_in? && current_user.admin? %>
-	      <button class="btn_actions"><%= link_to 'Show', product %></button>
+			<div class="row edit">
+		    <div class="col-xs-4">
+		    <% if signed_in? && current_user.admin? %>
+		      <button class="btn_actions"><%= link_to 'Show', product %></button>
+		      <% end %>
+		    </div>
+		    
+		    <div class="col-xs-4">
+		    <% if signed_in? && current_user.admin? %>
+		      <button class="btn_actions"><%= link_to 'Edit', edit_product_path(product) %></button>
+		     <% end %>
+		    </div>
+
+		    <div class="col-xs-4">
+		    <% if signed_in? && current_user.admin? %>
+		      <button class="btn_actions"><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %></button>
 	      <% end %>
-	    </div>
-	    
-	    <div class="col-xs-4">
-	    <% if signed_in? && current_user.admin? %>
-	      <button class="btn_actions"><%= link_to 'Edit', edit_product_path(product) %></button>
-	     <% end %>
+				</div>
 	    </div>
 
-	    <div class="col-xs-4">
-	    <% if signed_in? && current_user.admin? %>
-	      <button class="btn_actions"><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %></button>
-      <% end %>
-			</div>
-    </div>
-  
-  </div>
+	  </div>
 
   <% end %>
   
