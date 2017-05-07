@@ -6,9 +6,9 @@
 <div class="container-fluid same-height">
 
   <div class="row">
-  	<% cache(@products) do %>
+  	<%# cache(@products) do %>
     	<%= render @products %> 
-    <% end %>
+    <%# end %>
   </div>
 
   <% if signed_in? && current_user.admin? %>

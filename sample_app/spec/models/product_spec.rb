@@ -14,7 +14,7 @@ describe Product do
 		end
 
 		it "returns average rating of comments" do
-			expect(@product.average_rating).to eq 3.25
+		  expect(@product.average_rating).to eq 3.25
 		end
 	end
 
