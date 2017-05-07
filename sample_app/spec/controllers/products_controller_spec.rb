@@ -27,6 +27,11 @@ describe ProductsController, type: :controller do
         sign_in admin
       end
 
+      it "admin can edit product" do
+        get :edit, params: {id: product.id}
+        expect(response).to have_http_status(200)
+      end
+
       it "admin can delete product" do
         delete :destroy, params: {id: product.id}
         expect(response).to redirect_to(products_path)
